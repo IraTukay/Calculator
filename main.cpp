@@ -1,6 +1,6 @@
 #include <iostream>
-#include "inputOutputFunctions.cpp"
-
+#include "inputOutputFunctions.h"
+using namespace std;
 int main() {
     cout << "   Calculator Console Application" << endl << endl;
 
