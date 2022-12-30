@@ -8,13 +8,13 @@ int sub (int a, int b){
     return(a-b);
 }
 int mult(int a, int b) {
-    return (a*b);
+    return a*b;
 }
 int division(int a, int b) {
-    return (a / b);
+    return a / b;
 }
 int mod(int a, int b) {
-    return (a % b);
+    return a % b;
 }
 int unaryPlus(int a) {
     return a;
@@ -23,7 +23,7 @@ int unaryMinus(int a) {
     return a*(-1);
 }
 double sum(double a, double b){
-    return(a+b);
+    return a+b;
 }
 double sub (double a, double b){
     return a-b;
@@ -32,7 +32,7 @@ double mult(double a, double b) {
     return a*b;
 }
 double division(double a, double b) {
-    return (a / b);
+    return a / b;
 }
 double unaryPlus(double a) {
     return a;
