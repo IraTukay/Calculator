@@ -2,7 +2,7 @@
 #include "arithmeticAndLogicOperators.h"
 #include "mathFunctions.h"
 #include "bitWise.h"
-
+#include "comparison.h"
 #include "trigometricFunctions.h"
 using namespace std;
 enum operations {
@@ -21,7 +21,7 @@ enum operations {
     disjunction_Negation = 'n',
 
     absolute_value = '|',
-    sqr_root = '/',
+    sqr_root = 'V',
     reciprocal = 'r',
 
     bitwise_Not = '~',
@@ -39,6 +39,10 @@ enum operations {
     tangens = 't',
     Cotangens = 'k',
     Loge = 'e',
+    Ascending = 'a',
+    Descending = 'd',
+    is_Equal = 'q',
+    is_NotEqual = '!',
 };
 int BinaryResult(int a, int b, operations sign) {
     switch (sign) {
@@ -80,11 +84,38 @@ int BinaryResult(int a, int b, operations sign) {
             return rightShift(a,b);
         case operations::powab:
             return pow(a, b);
-
-
+        case operations::Ascending:
+            return ascending(a,b);
+        case operations::Descending:
+            return descending(a,b);
+        case operations::is_NotEqual:
+            return isNotEqual(a,b);
+        case operations::is_Equal:
+            return isEqual(a,b);
     }
 }
 
+bool BinaryResult(double a, double b, operations sign) {
+    switch (sign) {
+        case operations::Ascending:
+            return ascending(a, b);
+        case operations::Descending:
+            return descending(a, b);
+        case operations::is_NotEqual:
+            return isNotEqual(a, b);
+        case operations::is_Equal:
+            return isEqual(a, b);
+        case operations::add:
+            return sum(a,b);
+        case operations::subtract:
+            return sub(a,b);
+        case operations::multiply:
+            return mult(a,b);
+        case operations::divide:
+            return division(a,b);
+
+    }
+}
 
     int UnaryResult(int a, operations sign) {
         switch (sign) {
@@ -106,6 +137,14 @@ int BinaryResult(int a, int b, operations sign) {
     }
     double UnaryResult(double a, operations sign) {
         switch (sign) {
+            case operations::unary_plus:
+                return unaryPlus(a);
+            case operations::unary_minus:
+                return unaryMinus(a);
+            case operations::negation:
+                return Negation(a);
+            case operations::absolute_value:
+                return absolute(a);
             case operations::sqr_root:
                 return sqrt(a);
             case operations::reciprocal:
@@ -122,14 +161,8 @@ int BinaryResult(int a, int b, operations sign) {
                 return cotan(a);
             case operations::Loge:
                 return ln(a);
-               //  case operations::Sinus:
-               //        return sin(a); */
-           // case operations::tangens:
-             //   return tg(a);
-         //   case operations::cotangens:
-               // return ctg(a);
+
         }
     }
 
-//void Input ()
-//BinaryFunction
+
