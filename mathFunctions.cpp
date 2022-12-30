@@ -1,6 +1,11 @@
-
 #include "mathFunctions.h"
 int absolute(int a) {
+    if (a>=0)
+        return a;
+    else
+        return -a;
+}
+double absolute(double a) {
     if (a>=0)
         return a;
     else
@@ -35,12 +40,24 @@ double pow(double a, double b) {
         n*=a;
     return n;
 }
+
 double sqrt(double a) {
     if (a<0)
         throw "Error";
-    else
-        return pow(a,0.5);
+    else {
+        double k = 0.5;
+        double n = 1.0;
+        double i = 1.0;
+        while (i <= 20) {
+            k *= (0.5 - i);
+            n += k * pow(a - 1, i) / factorial(i);
+            i += 1.0;
+        }
+
+        return n;
+    }
 }
+
 double ln(double a) {
     double n=0.0;
     double i=1.0;
@@ -50,3 +67,4 @@ double ln(double a) {
     }
     return n;
 }
+
