@@ -1,15 +1,10 @@
 
+#include "mathFunctions.h"
 int absolute(int a) {
     if (a>=0)
         return a;
     else
         return -a;
-}
-double sqrt(double a) {
-    if (a<0)
-       throw "Error";
-    else
-        return pow(a,0.5);
 }
 double reciprocalFunction(double a) {
     return (1/a);
@@ -39,6 +34,12 @@ double pow(double a, double b) {
     for (int i=1; i<=b; i++ )
         n*=a;
     return n;
+}
+double sqrt(double a) {
+    if (a<0)
+        throw "Error";
+    else
+        return pow(a,0.5);
 }
 double ln(double a) {
     double n=0.0;
