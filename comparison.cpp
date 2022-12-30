@@ -22,3 +22,6 @@ bool isEqual(double x, double y){
 bool isNotEqual(double x, double y) {
     return !isEqual(x, y);
 }
+
+
+
