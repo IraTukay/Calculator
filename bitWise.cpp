@@ -23,6 +23,4 @@ int leftShift(int number, int shift) {
 int rightShift (int number, int shift) {
     return number/pow(2,shift);
 }
-//int leftShift(int number, int shift, bool isLogic) {
 
-//}
