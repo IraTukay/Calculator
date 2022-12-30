@@ -22,6 +22,25 @@ int unaryPlus(int a) {
 int unaryMinus(int a) {
     return a*(-1);
 }
+double sum(double a, double b){
+    return(a+b);
+}
+double sub (double a, double b){
+    return a-b;
+}
+double mult(double a, double b) {
+    return a*b;
+}
+double division(double a, double b) {
+    return (a / b);
+}
+double unaryPlus(double a) {
+    return a;
+}
+double unaryMinus(double a) {
+    return a*(-1);
+}
+
 
 bool Negation(bool a) {
     return !a;
