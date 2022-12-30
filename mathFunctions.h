@@ -5,6 +5,7 @@
 #include "mathFunctions.cpp"
 
 int absolute(int);
+double absolute(double);
 double sqrt(double);
 double reciprocalFunction(double);
 double factorial(double);
