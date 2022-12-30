@@ -1,4 +1,3 @@
-
 #ifndef CALCULATOR_TRIGOMETRICFUNCTIONS_H
 #define CALCULATOR_TRIGOMETRICFUNCTIONS_H
 #include "trigometricFunctions.cpp"
