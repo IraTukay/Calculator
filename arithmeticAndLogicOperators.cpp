@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <cmath>
+
 #include "arithmeticAndLogicOperators.h"
 
 int sum(int a, int b){
